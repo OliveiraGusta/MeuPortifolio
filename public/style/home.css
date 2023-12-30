@@ -74,6 +74,10 @@
     margin-left: -15vh;
 }
 
+#icon-language{
+    fill: gold;
+}
+
 
 .sub-title-container {
     display: flex;

@@ -25,17 +25,20 @@
             <ul class="icon-list">
                 <li>
                     <a href="">
-                        <img src="assets/icons/java.svg" width="64">
+                        <img src="assets/icons/java.svg" onmouseover="changeIconLanguage(this.src, this.alt)"
+                            alt="Java Icon" width="64">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="assets/icons/kotlin.svg" width="60">
+                        <img src="assets/icons/kotlin.svg" onmouseover="changeIconLanguage(this.src, this.alt)"
+                            alt="kotlin Icon" width="60">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="assets/icons/python.svg" width="60">
+                        <img src="assets/icons/python.svg" onmouseover="changeIconLanguage(this.src, this.alt)"
+                            alt="python Icon" width="60">
                     </a>
                 </li>
             </ul>
@@ -49,10 +52,10 @@
     </section>
 
     <div id="icon-language-container">
-        <img id="icon-java-container" src="assets/icons/java.svg" alt="Java Icon"> 
-        <img id="icon-python-container" src="assets/icons/python.svg" alt="Python Icon"> 
-        <img id="icon-kotlin-container" src="assets/icons/kotlin.svg" alt="Kotlin Icon"> 
+        <img id="icon-language" src="assets/icons/java.svg" alt="Java Icon">
+        <script src="./scripts/change-icon-language-container.js"></script>
     </div>
+
 
     <div class="name-container">
         <h2>ENTRE EM CONTATO</h2>
@@ -63,7 +66,7 @@
             <a href="">
                 <img src="assets/icons/circle-mail.svg" width="50">
             </a>
-            <a href="">
+            <a href="https://www.linkedin.com/in/oliveiragusta/" target="_blank">
                 <img src="assets/icons/circle-linkedin.svg" width="50">
             </a>
         </div>
