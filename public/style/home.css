@@ -1,0 +1,125 @@
+:root {
+	--branco-principal: #fcfcfc;
+	--branco-secundario: #e4ddf0;
+
+	--verde-principal: #7ED957;
+	--verde-secundario: #477a31;
+
+	--cinza-principal: #e8e8e8;
+	--cinza-secundario: #414341;
+	--cinza-terciario: #a1a2a1;
+}
+*{
+    padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 2vh;
+
+  
+}
+
+
+
+#menu-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#menu-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#menu-container ul li {
+    margin: 0 10px;
+}
+
+#menu-container ul li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease; 
+    border-bottom: 2px solid transparent;
+    padding: 0 5px 3px;
+}
+
+#menu-container ul li a:hover {
+    color: lightgreen;
+    border-bottom: 1px solid lightgreen; 
+  
+}
+
+#home-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10em 23%;
+    
+}
+
+.sub-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.sub-title-container h3{
+    padding: 0 20px 3px 0;
+    border-bottom: 5px solid lightgreen; 
+    font-size: 1em;
+}
+
+
+
+.icon-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.icon-list li {
+    margin-right: 10px;
+}
+
+.icon-list li a{
+    margin-right: 10px;
+    padding: 0 5px 3px;
+    border-bottom: 2px solid transparent;
+
+}
+
+.icon-list li a:hover{
+    border-bottom: 4px solid lightgreen; 
+
+}
+
+.icon-list li a img {
+    transition: transform 0.3s ease; 
+}
+
+.icon-list li a:hover img {
+    transform: translateY(-5px);
+}
+
+
+
+.name-container{
+    text-align: center;
+}
+
+.name-container h1{
+    font-size: 8em;
+    font-weight: 600;
+    margin-top: -5%;
+}
+
+.name-container p{
+    font-size: 0.8em; 
+    text-align: right; 
+    margin-top: 0;  
+}
+
