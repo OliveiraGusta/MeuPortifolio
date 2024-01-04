@@ -1,13 +1,15 @@
 :root {
-	--branco-principal: #fcfcfc;
-	--branco-secundario: #e4ddf0;
+	--white: #fcfcfc;
+	--white-secondary: #e4ddf0;
 
-	--verde-principal: #7ED957;
-	--verde-secundario: #477a31;
+	--lightgreen: #7ED957;
+	--lightgreen-secondary: #D0FFBB;
+	--green: #192E10;
 
-	--cinza-principal: #e8e8e8;
-	--cinza-secundario: #414341;
-	--cinza-terciario: #a1a2a1;
+	--grey: #9E9FA3;
+	--grey-secondary: #414341;
+
+	--warning: #ff4e37;
 }
 
 *{
@@ -17,11 +19,11 @@
     font-weight: 100;
     font-size: 2vh;
 
-  
 }
 
-
-
+body{
+    background-color: var(--white);
+}
 
 #menu-container {
     display: flex;
@@ -49,8 +51,8 @@
 }
 
 #menu-container ul li a:hover {
-    color: lightgreen;
-    border-bottom: 1px solid lightgreen; 
+    color: var(--lightgreen);
+    border-bottom: 1px solid var(--lightgreen); 
   
 }
 
@@ -68,15 +70,30 @@
 }
 
 #icon-language-container img {
-    width: 550px;
+    width: 520px;
     height: auto;
-    opacity: 70%; 
+    opacity: 30%; 
     margin-left: -15vh;
 }
 
 #icon-language{
     fill: gold;
+    
 }
+
+
+#icon-language {
+    opacity: 0;
+    transition: transform 1s ease;
+    
+}
+
+.icon-language-transition-class {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+
 
 
 .sub-title-container {
@@ -88,7 +105,7 @@
 
 .sub-title-container h3{
     padding: 0 20px 3px 0;
-    border-bottom: 5px solid lightgreen; 
+    border-bottom: 5px solid var(--lightgreen); 
     font-size: 1em;
 }
 
@@ -114,7 +131,7 @@
 }
 
 .icon-list li a:hover{
-    border-bottom: 4px solid lightgreen; 
+    border-bottom: 4px solid var(--lightgreen); 
 
 }
 
