@@ -184,3 +184,52 @@ body{
     transform: translateY(-5px);
 }
 
+.about-container{
+    display: flex;
+    justify-content: center;
+    padding: 10vh 20vh 0 20vh;
+    
+}
+
+.about-container div h2{
+    padding: 10vh 0 0 2vh;
+    margin-bottom: 2vh;
+    border-left: 4px solid var(--lightgreen);
+
+    font-size: 2em; 
+    color: var(--lightgreen);
+}
+.about-container div p{
+   font-weight: 100;
+}
+
+#about-container div img{
+    padding-left: 10vh;
+    
+}
+
+.skills-container{
+    margin-top: -50px;
+    padding-bottom: 20vh;
+    background-color: var(--lightgreen-secondary);
+    
+}
+
+.skills-text-container{
+    padding: 10vh 20vh 0 20vh;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-text-container h2{
+    padding-right: 50vh;
+
+    font-size: 2em; 
+}
+
+.skills-cards-container{
+    padding: 10vh 0 0 20vh;
+    display: flex;
+    justify-content: space-around;
+}
