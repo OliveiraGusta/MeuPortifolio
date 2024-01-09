@@ -12,6 +12,15 @@
 	--warning: #ff4e37;
 }
 
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* No início e no final, a imagem está na posição normal */
+    }
+    50% {
+        transform: translateY(-20px); /* Na metade da animação, a imagem está elevada (ou qualquer valor desejado) */
+    }
+}
+
 *{
     padding: 0;
 	margin: 0;
@@ -25,42 +34,48 @@ body{
     background-color: var(--white);
 }
 
-#menu-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+
+#menu-container nav {
+    text-align: center;
+
+    margin-top: 5vh;
 }
 
-#menu-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
+#menu-container nav a{
+    color: black;
+    text-decoration: none;
+    position: relative;
 
-#menu-container ul li {
+    padding: 0 20px 10px;
     margin: 0 10px;
 }
 
-#menu-container ul li a {
-    text-decoration: none;
-    color: black;
-    transition: color 0.3s ease; 
-    border-bottom: 2px solid transparent;
-    padding: 0 5px 3px;
+#menu-container nav a::after{
+    content: " ";
+    background-color: var(--lightgreen) ;
+    position: absolute;
+
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+
+    transition: 0.5s ease-in-out ;
 }
 
-#menu-container ul li a:hover {
-    color: var(--lightgreen);
-    border-bottom: 1px solid var(--lightgreen); 
-  
+#menu-container nav a:hover::after{
+    width: 100% !important;
+
+}
+#menu-container nav a:hover{
+    color: var(--lightgreen) ;
+
 }
 
 #home-container{
     display: flex;
     flex-direction: column;
     padding: 12em 60vh;
-    
 }
 
 #icon-language-container {
@@ -76,23 +91,17 @@ body{
     margin-left: -15vh;
 }
 
-#icon-language{
-    fill: gold;
-    
-}
-
 
 #icon-language {
     opacity: 0;
     transition: transform 1s ease;
-    
+    animation: moveUpDown 5s infinite; 
 }
 
 .icon-language-transition-class {
     opacity: 1;
     transform: translateY(-10px);
 }
-
 
 
 
@@ -108,8 +117,6 @@ body{
     border-bottom: 5px solid var(--lightgreen); 
     font-size: 1em;
 }
-
-
 
 .icon-list {
     display: flex;
@@ -142,8 +149,6 @@ body{
 .icon-list li a:hover img {
     transform: translateY(-5px);
 }
-
-
 
 
 .name-container{
@@ -184,6 +189,25 @@ body{
     transform: translateY(-5px);
 }
 
+#botao-seta {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--lightgreen);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilizando a seta para baixo */
+#botao-seta::after {
+    content: '\2193'; /* Código unicode para a seta para baixo */
+    margin-left: 5px;
+}
+
+
 .about-container{
     display: flex;
     justify-content: center;
@@ -195,18 +219,23 @@ body{
     padding: 10vh 0 0 2vh;
     margin-bottom: 2vh;
     border-left: 4px solid var(--lightgreen);
-
     font-size: 2em; 
     color: var(--lightgreen);
 }
 .about-container div p{
    font-weight: 100;
+   
+
 }
 
-#about-container div img{
+.about-container img {
     padding-left: 10vh;
-    
+    width: 120vh;
+    max-width: 100%;
+    height: auto;
+    animation: moveUpDown 3.5s infinite;
 }
+
 
 .skills-container{
     margin-top: -50px;
