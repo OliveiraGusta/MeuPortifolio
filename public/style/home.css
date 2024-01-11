@@ -14,10 +14,10 @@
 
 @keyframes moveUpDown {
     0%, 100% {
-        transform: translateY(0); /* No início e no final, a imagem está na posição normal */
+        transform: translateY(0); 
     }
     50% {
-        transform: translateY(-20px); /* Na metade da animação, a imagem está elevada (ou qualquer valor desejado) */
+        transform: translateY(-20px);
     }
 }
 
@@ -37,7 +37,6 @@ body{
 
 #menu-container nav {
     text-align: center;
-
     margin-top: 5vh;
 }
 
@@ -189,23 +188,6 @@ body{
     transform: translateY(-5px);
 }
 
-#botao-seta {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--lightgreen);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* Estilizando a seta para baixo */
-#botao-seta::after {
-    content: '\2193'; /* Código unicode para a seta para baixo */
-    margin-left: 5px;
-}
 
 
 .about-container{
@@ -246,19 +228,115 @@ body{
 
 .skills-text-container{
     padding: 10vh 20vh 0 20vh;
-
     display: flex;
     justify-content: space-between;
 }
 
 .skills-text-container h2{
     padding-right: 50vh;
-
     font-size: 2em; 
 }
 
 .skills-cards-container{
-    padding: 10vh 0 0 20vh;
+    padding: 10vh 0 0 0;
     display: flex;
     justify-content: space-around;
 }
+
+.skills-cards-container-cards {
+    display: flex;
+    align-items: center;
+    border-radius: 7%;
+
+    overflow: hidden;
+    background-color: var(--white);
+
+    padding: 2vh;
+    padding-right: 40vh;
+    margin-right: 5vh;
+    position: relative;
+
+}
+
+.skills-cards-container-cards-background{
+    width: 80%;
+    height: 80%;
+    margin-left: 11vh;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    opacity: 50%;
+  
+}
+
+#java-card .skills-cards-container-cards-background{
+    background-image: url('../assets/icons/java-lightgreen.svg');
+}
+#kotlin-card .skills-cards-container-cards-background{
+    background-image: url('../assets/icons/kotlin-lightgreen.svg');
+}
+#python-card .skills-cards-container-cards-background{
+    background-image: url('../assets/icons/python-lightgreen.svg');
+}
+#javascript-card  .skills-cards-container-cards-background{
+    background-image: url('../assets/icons/javascript.svg');
+}
+#php-card .skills-cards-container-cards-background{
+    background-image: url('../assets/icons/php.svg');
+}
+
+.skills-cards-container-img{
+    z-index: 2;
+    width: 80px;
+    height: auto;
+    margin-right: 5vh;
+}
+
+.skills-cards-container-infos{
+    z-index: 2;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.skills-cards-container-title{
+    font-size: 1.5em;
+   
+}
+
+.skills-cards-container-projects {
+    white-space: nowrap;
+    margin-top: 2vh;
+   
+}
+
+.skills-cards-container-projects a {
+    color: black;
+    text-decoration: none;
+
+}
+
+.skills-cards-container-projects a:hover {
+    color: var(--lightgreen);
+}
+
+.skills-cards-container-projects p{
+    margin-bottom: 1vh;
+}
+
+.skills-cards-container-projects a:hover i {
+    transform: translateX(5px);
+}
+
+.skills-cards-container-projects a i{
+    transition: transform 0.3s ease-in-out; 
+    border-radius: 50%;
+    padding: 1vh;
+    font-size: 1em;
+    color: var(--white);
+    background-color: var(--grey-secondary);
+
+}
+
+
